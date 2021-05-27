@@ -58,6 +58,8 @@ def api_payload():
         print("Default branch: ", api_body["repository"]["default_branch"])
         default_branch = api_body["repository"]["default_branch"]
         # TODO GitHub API V3 issue to be investigated - API response has default_branch master
+        # Github community support ticket:
+        # https://github.community/t/github-organization-webhook-respository-created-event-default-branch-field/182245
         # pygithub call to get branch
         protect_branch = org_repo.get_branch('main')
         # Call to edit branch protection
