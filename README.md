@@ -59,7 +59,16 @@ A project to listen to incoming **Github** _Repositories_ webhooks and specifica
 3. Hit `Create repository` button and GitHub will fire a webhook to `ngrok` url which will be forwarded to our `flask` web server. Check back on `Python` terminal window for console logs.
 4. Navigate to the newly created repository and make sure issue is created and default branch is protected
 
-## 
+## References
+Inspired by:
+```
+https://docs.github.com/en/developers/webhooks-and-events/webhooks/creating-webhooks
+https://docs.github.com/en/rest/reference/orgs#webhooks
+https://docs.github.com/en/developers/webhooks-and-events/webhooks/configuring-your-server-to-receive-payloads
+https://github.com/github/platform-samples/tree/master/hooks/python/configuring-your-server
+https://gist.github.com/joseywoermann/3bd07b7e846fca7d54d37fe10328994b
+https://pygithub.readthedocs.io/en/latest/introduction.html
+```
 
     
     
