@@ -10,7 +10,7 @@ from flask import Flask, request
 app = Flask(__name__)
 
 # Ensure a github token is set in environment variable
-# TODO: Retrieve secret from Key Vault or Secret Manager
+# TODO Retrieve secret from Key Vault or Secret Manager
 
 try:
     os.environ["GITHUB_PAT"]
@@ -57,8 +57,9 @@ def api_payload():
         # Identify branch to protect
         print("Default branch: ", api_body["repository"]["default_branch"])
         default_branch = api_body["repository"]["default_branch"]
+        # TODO GitHub API V3 issue to be investigated - API response has default_branch master
         # pygithub call to get branch
-        protect_branch = org_repo.get_branch(default_branch)
+        protect_branch = org_repo.get_branch('main')
         # Call to edit branch protection
         protect_branch.edit_protection(strict=True, required_approving_review_count=2, enforce_admins=True)
         print("Edited branch protection rules for: ", default_branch)
