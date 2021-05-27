@@ -66,6 +66,7 @@ def api_payload():
         # TODO Other actions to be added
         print("Not interested in actions other than created")
 
+    print("All done")
     return 'OK'
 
 
